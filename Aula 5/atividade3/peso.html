@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesos</title>
+</head>
+<body>
+    <h1>Faça o fechamento da nota média do aluno(a)</h1>
+    <p>Nome1:<span id="nome1"></span></p>
+    <p>Peso1:<span id="peso1"></span></p>
+
+    <p>Nome2:<span id="nome2"></span></p>
+    <p>Peso2:<span id="peso2"></span></p>
+
+    <p>Nome3:<span id="nome3"></span></p>
+    <p>Peso3:<span id="peso3"></span></p>
+
+    <script>
+        
+        let nome1 = prompt("Digite o nome da primeira pessoa")
+        let peso1 = prompt("Digite o Peso da primeira pessoa")
+
+        let nome2 = Number (prompt("Digite o nome da segunda pessoa"))
+        let peso2 = Number (prompt("Digite o Peso da segunda pessoa"))
+
+        let nome3 = Number(prompt("Digite o nome da terceira pessoa"))
+        let peso3 = Number(prompt("Digite o Peso da terceira pessoa"))
+      
+        
+       
+     
+
+
+
+        document.getElementById('nome1').innerHTML = nome1;
+        document.getElementById('peso1').innerHTML = peso1;
+
+        document.getElementById('nome2').innerHTML = nome2;
+        document.getElementById('peso2').innerHTML = peso2;
+
+        document.getElementById('nome3').innerHTML = nome3;
+        document.getElementById('peso3').innerHTML = peso3;
+    
+
+    </script>
+
+
+
+</body>
+</html>

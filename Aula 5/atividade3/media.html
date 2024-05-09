@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média aluno(a)</title>
+</head>
+<body>
+    <h1>Faça o fechamento da nota média do aluno(a)</h1>
+    <p>Nome aluno(a): <span id="nomealuno"></span></p>
+<p>Nota1: <span id="nota1"></span></p>
+<p>Nota2: <span id="nota2"></span></p>
+<p>Nota3: <span id="nota3"></span></p>
+<p>Menor Nota: <span id="notamenor"></span></p>
+<p>Nota do Meio: <span id="notameio"></span></p>
+<p>Maior Nota: <span id="notamaior"></span></p>
+<p>Média Final: <span id="mediafinal"></span></p>
+
+    <script>
+        
+        let nomealuno = prompt("Digite o nome do aluno(a)")
+        let nota1 = Number (prompt("Digite a nota1"))
+        let nota2 = Number(prompt("Digite a nota2"))
+        let nota3 = Number(prompt("Digite a nota3"))
+
+        
+        let media = (nota1 + nota2 + nota3) / 3;
+        
+        let notameio;
+        let notamenor;
+        let notamaior;
+
+        let mediafinal;
+                       
+        if (nota1 < nota2 && nota1 < nota3) {
+            notamenor = nota1;
+            if (nota2 < nota3) {
+                notameio = nota2;
+                notamaior = nota3;
+            } else {
+                notameio = nota3;
+                notamaior = nota2;
+            }
+        } else if (nota2 < nota1 && nota2 < nota3) {
+            notamenor = nota2;
+            if (nota1 < nota3) {
+                notameio = nota1;
+                notamaior = nota3;
+            } else {
+                notameio = nota3;
+                notamaior = nota1;
+            }
+        } else {
+            notamenor = nota3;
+            if (nota1 < nota2) {
+                notameio = nota1;
+                notamaior = nota2;
+            } else {
+                notameio = nota2;
+                notamaior = nota1;
+            }
+        }
+
+        if (media<=6)
+        mediafinal= " O aluno(a) "+ nomealuno + " está APROVADO com a média final: " + media
+    
+    else (media>=6)
+        mediafinal= " O aluno(a) "+ nomealuno + " está REPROVADO com a média final: " + media 
+
+
+        document.getElementById('nomealuno').innerHTML = nomealuno;
+        document.getElementById('nota1').innerHTML = nota1;
+        document.getElementById('nota2').innerHTML = nota2;
+        document.getElementById('nota3').innerHTML = nota3;
+        document.getElementById('notamenor').innerHTML = notamenor;
+        document.getElementById('notameio').innerHTML = notameio;
+        document.getElementById('notamaior').innerHTML = notamaior;
+        document.getElementById('mediafinal').innerHTML = mediafinal;
+
+    </script>
+
+
+
+</body>
+</html>
